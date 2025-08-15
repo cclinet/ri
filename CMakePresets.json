@@ -1,0 +1,18 @@
+{
+  "version": 8,
+  "configurePresets": [
+    {
+      "name": "vcpkg",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": {
+          "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+          "type": "FILEPATH"
+        },
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "1",
+        "Python_ROOT_DIR": "${sourceDir}/.venv"
+      }
+    }
+  ]
+}
